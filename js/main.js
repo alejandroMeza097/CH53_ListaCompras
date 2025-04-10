@@ -11,7 +11,7 @@ const cuerpoTabla = tablaListaCompras.getElementsByTagName("tbody").item(0);
 const contadorProductos =document.getElementById("contadorProductos");
 const productosTotal = document.getElementById("productosTotal");
 const precioTotal = document.getElementById("precioTotal");
-
+const btnClear = document.getElementById("btnClear");
 
 
 
@@ -149,7 +149,7 @@ window.addEventListener("load",function(event){
     
     }
 
-    
+
     datos.forEach((d) => {
         let row = ` <tr>
                     <td>${d.contador}</td>
@@ -177,5 +177,12 @@ window.addEventListener("load",function(event){
 
 });
 
+//OREJA PARA EL BOTON DE LIMPIAR//////////////////////////////////////////////////////
+btnClear.addEventListener("click",function(event){
+    event.preventDefault();
+    localStorage.removeItem("resumen");
+    localStorage.removeItem("datos");
+    location.reload();
+});
 
 
