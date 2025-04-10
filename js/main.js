@@ -178,6 +178,7 @@ window.addEventListener("load",function(event){
 });
 
 //OREJA PARA EL BOTON DE LIMPIAR//////////////////////////////////////////////////////
+
 btnClear.addEventListener("click",function(event){
     event.preventDefault();
     localStorage.removeItem("resumen");
@@ -185,4 +186,29 @@ btnClear.addEventListener("click",function(event){
     location.reload();
 });
 
+
+//OREJA PARA EL BOTON DE LIMPIAR VERSION 2 //////////////////////////////////////////////////////
+/*
+btnClear.addEventListener("click",function(event){
+    event.preventDefault();
+
+    localStorage.removeItem("resumen");
+    localStorage.removeItem("datos");
+
+    contador = 0;
+    totalEnProductos = 0;
+    costoTotal = 0;
+
+    contadorProductos.innerText = cont;
+    productosTotal.innerText = totalEnProductos;
+    
+    precioTotal.innerText = "$ 0.00";
+    cuerpoTabla.innerHTML = "";
+    txtName.value = "";
+    txtNumber.value = "";
+    txtName.focus();
+    alertValidaciones.style.display = "none";
+    
+});
+*/
 
